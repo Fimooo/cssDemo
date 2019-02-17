@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+        html *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .layout{
+            display: grid;
+            grid-template-rows: 100px auto 100px;
+        }
+        .layout .head{
+            background-color: blueviolet;
+        }
+        .layout .footer{            
+            background-color:brown;
+        }
+        .layout .center{
+            display: inline-grid;
+            grid-template-columns: 100px auto 100px;
+        }
+        .layout .center div{
+            min-height: 400px;
+        }
+
+        .layout .center div:nth-child(2){
+            background-color: thistle;
+        }
+        .layout .center div:first-child{
+            background-color:tan;
+        }
+        .layout .center div:nth-child(3){
+            background-color: springgreen;
+        }
+</style>
+<body>
+        <div class="layout">
+                <header class="head">
+                    这是header
+                </header>
+                <div class="center">
+                    <div>left</div> 
+                    <div>content</div>
+                    <div>right</div>
+                </div>
+                <footer class="footer">
+                    这是footer
+                </footer>
+            </div>
+</body>
+</html>

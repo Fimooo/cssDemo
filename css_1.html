@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .layout article div{
+            min-height: 100px;
+        }
+        .grid-content{
+            display: grid;
+            width: 100%;
+            grid-template-rows:100px;
+            grid-template-columns: 300px auto 300px;
+        }
+
+        .grid-left{
+            background-color: lightsalmon;
+        }
+
+        .grid-right{
+            background-color: lightblue;
+        }
+
+        .grid-center{
+            background-color: lightcoral
+        }
+        .layout.float .left{
+            float: left;
+            width: 300px;
+            background-color: red
+        }
+        .layout.float .right{
+            float: right;
+            width: 300px;
+            background-color: blueviolet
+        }
+        .layout.float .center{
+            background-color: aqua
+        }
+
+       
+
+        .absolute div{
+            position: absolute;
+        }
+
+        .layout.absolute .left{
+            left: 0;
+            width:300px;
+            background-color: pink
+        }
+
+        .layout.absolute .right{
+            right: 0;
+            width: 300px;
+            background-color: blue
+        }
+
+         .layout.absolute .center{
+            right: 300px;
+            left: 300px;
+            
+            background-color: rosybrown
+        }
+
+        
+        .flex-content{
+            display: flex;
+        }
+
+        .flex .left{
+            width: 300px;
+            background-color:palegreen
+        }
+
+        .flex .right{  
+            width: 300px;
+            background-color: olive
+        }
+
+        .flex .center{
+            flex: 1;
+            background-color: navy
+        }
+
+        .table-content{
+            display: table;
+            width: 100%;
+            min-height: 100px;
+        }
+
+        .table-left{
+            display: table-cell;
+            width: 300px;
+            background-color: mediumvioletred;
+        }
+
+        .table-right{
+            display: table-cell;
+            width: 300px;
+            background-color:mediumslateblue;
+        }
+
+        .table-center{
+            display: table-cell;
+            background-color:lime;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+        <section class="layout grid">
+                <article class="grid-content">
+                    <div class="grid-left"></div>
+                    <div class="grid-center">
+                            <h1>这是grid</h1>
+                            这是grid三栏
+
+                        </div>  
+                    <div class="grid-right"></div>
+                </article>
+            </section>
+            <section class="layout table">
+                <article class="table-content">
+                    <div class="table-left"></div>
+                    <div class="table-center">
+                            <h1>table</h>
+                                这是table三栏
+                        </div>  
+                    <div class="table-right"></div>
+                </article>
+            </section>
+            <section class="layout flex">
+                <article class="flex-content">
+                    <div class="left"></div>
+                    <div class="center">
+                            <h1>flex</h1>
+                            这是flex三栏
+                        </div>  
+                    <div class="right"></div>
+                </article>
+            </section>
+    <section class="layout float">
+        <article class="content">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="center">
+                <h1>这是float</h1>
+                这是float三栏
+            </div>    
+        </article>
+    </section>
+        <section class="layout absolute">
+            <article class="content">
+                <div class="left"></div>
+                <div class="center">
+                        <h1>这是absolute</h1>
+                        这是absolute三栏
+                    </div>  
+                <div class="right"></div>
+            </article>
+        </section>
+       
+</body>
+</html>

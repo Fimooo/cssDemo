@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+<style>
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+
+    body {
+        display: flex;
+        flex-flow: column nowrap;   
+        /* 确定竖轴为主轴 */
+        justify-content: space-between;
+        /* 确定两端各自对齐，中间项目均分 */
+        align-items: stretch;
+        /* 确定子元素在交叉轴的对齐方式为，分布在两端，中间均分 */
+
+    }
+
+    #content {
+        background-color: red;
+    }
+
+    #footer {
+        background-color: blueviolet;
+        flex:0 0 80px;
+        /* 子元素不放大缩小且固定高度 */
+    }
+
+    #main {
+        height: 10px;
+    }
+</style>
+
+<body>
+    <div id="content">
+        <div id="main">
+12121212
+        </div>
+    </div>
+    <div id="footer">
+ddd
+    </div>
+</body>
+
+</html>
